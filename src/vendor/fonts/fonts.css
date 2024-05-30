@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'ALSGorizont-ExtraBoldExpanded';
+    src: url('../fonts/alsgorizont-extraboldexpanded.eot'); /* IE 9 Compatibility Mode */
+    src: url('../fonts/alsgorizont-extraboldexpanded.eot?#iefix') format('embedded-opentype'), /* IE < 9 */ url('../fonts/alsgorizont-extraboldexpanded.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/alsgorizont-extraboldexpanded.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */ url('../fonts/alsgorizont-extraboldexpanded.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}

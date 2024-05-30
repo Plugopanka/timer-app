@@ -1,0 +1,26 @@
+@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/extends.scss';
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    &__button {
+        padding: 0;
+    }
+    &__text {
+        margin: 0;
+        font-size: 14px;
+        color: $secondaryText;
+        &_large {
+            font-size: 32px;
+        }
+    }
+}
+
+.title {
+    margin: 0;
+    font-size: 24px;
+    padding: 24px 0;
+    width: 100%;
+    @extend %border;
+}

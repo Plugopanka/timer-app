@@ -1,0 +1,33 @@
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts/fonts.css);
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'ALSGorizont-ExtraBoldExpanded', Arial, sans-serif;
+    line-height: 1.1;
+    font-weight: 800;
+    min-height: 100%;
+    color: #fff;
+    background-color: #f3fef5;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -ms-overflow-style: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+#root {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding-top: 20vh;
+}

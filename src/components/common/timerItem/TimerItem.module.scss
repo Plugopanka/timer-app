@@ -1,0 +1,30 @@
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/extends.scss';
+
+.timer {
+    display: flex;
+    gap: 10px;
+    padding: 35px 0 29px;
+    @extend %border;
+
+    &:last-of-type {
+        border: none;
+    }
+
+    &__button {
+        @extend %btn;
+        &_right {
+            margin-left: auto;
+        }
+    }
+
+    &__title {
+        font-size: 36px;
+        margin: 0;
+    }
+
+    &__text {
+        font-size: 10px;
+        margin: 0;
+    }
+}

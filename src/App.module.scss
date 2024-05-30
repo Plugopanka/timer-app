@@ -1,0 +1,26 @@
+@import './assets/styles/variables.scss';
+
+button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-indent: 0;
+}
+
+.page {
+    min-height: 422px;
+    width: 390px;
+    padding: 12px 26px;
+    box-sizing: border-box;
+    background-color: $background;
+    position: relative;
+}

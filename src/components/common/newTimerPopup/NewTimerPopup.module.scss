@@ -1,0 +1,70 @@
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/extends.scss';
+
+.popup {
+    @extend %popup;
+
+    &_opened {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__form {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        margin: 0 auto 0 0;
+        font-size: 24px;
+        padding: 27px 0;
+    }
+
+    &__input {
+        display: inline;
+        color: $primaryText;
+        background: none;
+        border: none;
+        font-size: 40px;
+        max-width: 60px;
+        padding: 0;
+        text-align: center;
+    }
+
+    &__label {
+        font-size: 20px;
+    }
+
+    &__button {
+        @extend %btn;
+        @extend %shadow;
+        font-size: 20px;
+        border-radius: 32px;
+        width: 206px;
+        height: 56px;
+        color: $primaryText;
+        background-color: $primary;
+        margin-top: 40px;
+        &:disabled {
+            background-color: $tertiory;
+        }
+    }
+}
+
+.heading {
+    display: flex;
+    &__button {
+        padding: 0;
+    }
+    &__text {
+        margin: 0;
+        font-size: 14px;
+        color: $secondaryText;
+        &_large {
+            font-size: 32px;
+        }
+    }
+}

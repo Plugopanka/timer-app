@@ -1,0 +1,33 @@
+@import './variables.scss';
+
+%popup {
+    padding: 23px 26px;
+    box-sizing: border-box;
+    background-color: $background;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+%btn {
+    text-align: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+%border {
+    border-bottom: 1px solid rgba($color: #fff, $alpha: 0.2);
+}
+
+%shadow {
+    box-shadow: inset -4px -6px 5px 0 rgba($color: #000, $alpha: 0.25);
+}
