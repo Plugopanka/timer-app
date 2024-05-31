@@ -10,6 +10,7 @@ export default function App() {
   const [targetItem, setTargetItem] = useState({});
   const [timerItems, setTimerItems] = useState([]);
 
+  // создавать для каждого таймера т.е. в timer item
   const [minutes, setMinutes] = useState("");
   const [seconds, setSeconds] = useState("");
   const [currentMinutes, setCurrentMinutes] = useState("");
@@ -21,6 +22,7 @@ export default function App() {
     setTargetItem({});
   }
 
+  // нужно в newTimerPopup
   function startTimer() {
     if (minutes !== 0 || seconds !== 0) {
       const newItem = {
@@ -55,6 +57,7 @@ export default function App() {
     console.log(targetItem);
   }
 
+  // нужно в timerItem timerItemPopup
   function resetTimer() {
     setIsRunning(false);
     setCurrentSeconds(seconds);
@@ -62,6 +65,8 @@ export default function App() {
     console.log(currentSeconds);
   }
 
+
+// нужно в timerItem
   useEffect(() => {
     let interval;
     if (isRunning) {
@@ -108,7 +113,6 @@ export default function App() {
               onItemClick={setTargetItem}
               onItemDelete={handleItemDelete}
               onPopupOpen={setIsPopupOpen}
-              startTimer={startTimer}
               pauseTimer={pauseTimer}
               handleItemDelete={handleItemDelete}
               handleItemClick={handleItemClick}
