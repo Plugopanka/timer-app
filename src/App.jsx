@@ -57,8 +57,8 @@ export default function App() {
 
   function resetTimer() {
     setIsRunning(false);
-    setCurrentSeconds(0);
-    setCurrentMinutes(0);
+    setCurrentSeconds(seconds);
+    setCurrentMinutes(minutes);
     console.log(currentSeconds);
   }
 
@@ -71,6 +71,8 @@ export default function App() {
         } else if (currentMinutes > 0) {
           setCurrentMinutes((currentMinutes) => currentMinutes - 1);
           setCurrentSeconds(59);
+        } else if (currentSeconds == 0) {
+          setCurrentSeconds(0);
         }
 
         setTimerItems([
@@ -79,7 +81,8 @@ export default function App() {
       }, 1000);
     }
 
-    if (currentMinutes == 0 && currentSeconds == 1) {
+    if (currentMinutes == 0 && currentSeconds == 0) {
+      setCurrentSeconds(0);
       resetTimer();
     }
     return () => clearInterval(interval);
@@ -130,6 +133,11 @@ export default function App() {
         onClose={closeAllPopups}
         item={targetItem}
         onItemDelete={handleItemDelete}
+        currentMinutes={currentMinutes}
+        currentSeconds={currentSeconds}
+        pauseTimer={pauseTimer}
+        isRunning={isRunning}
+        resetTimer={resetTimer}
       />
     </div>
   );
