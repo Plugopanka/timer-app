@@ -5,11 +5,12 @@ import classNames from "classnames";
 
 export default function TimerList({
   timerItems,
-  onPopupOpen,
-  pauseTimer,
-  handleItemDelete,
-  handleItemClick,
-  isRunning,
+  setTimerItems,
+  setIsNewPopupOpen,
+  setTargetItem,
+  targetItem,
+  isItemPopupOpen,
+  setIsItemPopupOpen,
 }) {
   const [editMode, setEditMode] = useState({ isEdit: false, text: "Править" });
 
@@ -18,6 +19,10 @@ export default function TimerList({
       ? setEditMode({ isEdit: false, text: "Править" })
       : setEditMode({ isEdit: true, text: "Готово" });
   }
+
+  useEffect(() => {
+    setEditMode({ isEdit: false, text: "Править" });
+  }, [targetItem]);
 
   let className = classNames(styles.heading__text, styles.heading__text_large);
 
@@ -29,7 +34,7 @@ export default function TimerList({
         </button>
         <button
           className={styles.heading__button}
-          onClick={() => onPopupOpen(true)}
+          onClick={() => setIsNewPopupOpen(true)}
         >
           <p className={className}>+</p>
         </button>
@@ -41,14 +46,14 @@ export default function TimerList({
             <TimerItem
               key={data.id}
               data={data}
-              pauseTimer={pauseTimer}
+              timerItems={timerItems}
+              setTimerItems={setTimerItems}
               editMode={editMode.isEdit}
-              onClick={() => {
-                handleItemClick(data);
-                setEditMode(false);
-              }}
-              onDelete={handleItemDelete}
-              isRunning={isRunning}
+              setTargetItem={setTargetItem}
+              targetItem={targetItem}
+              setEditMode={setEditMode}
+              isItemPopupOpen={isItemPopupOpen}
+              setIsItemPopupOpen={setIsItemPopupOpen}
             />
           ))}
       </ul>

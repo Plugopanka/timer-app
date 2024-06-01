@@ -4,6 +4,10 @@
 .popup {
     @extend %popup;
 
+    &__container {
+        @extend %container;
+    }
+
     &_opened {
         visibility: visible;
         opacity: 1;

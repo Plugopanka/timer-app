@@ -4,6 +4,10 @@
 .popup {
     @extend %popup;
 
+    &__container {
+        @extend %container;
+    }
+
     &_opened {
         visibility: visible;
         opacity: 1;
@@ -14,7 +18,7 @@
         text-align: center;
     }
 
-    &__container {
+    &__btncontainer {
         display: flex;
         justify-content: space-between;
     }
